@@ -15,6 +15,18 @@ class App extends Component {
 					name: "Jimbob",
 					rating: 2,
 				},
+				{
+					name: "Jiffyy",
+					rating: 4,
+				},
+				{
+					name: "Tom",
+					rating: 3,
+				},
+				{
+					name: "Lewdog",
+					rating: 5,
+				},
 			],
 			player: {
 				input: "",
