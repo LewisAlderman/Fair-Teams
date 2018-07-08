@@ -1,0 +1,18 @@
+.form-container {
+	// background: crimson;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+	form {
+		align-self: center;
+		justify-self: center;
+		margin-bottom: 10%;
+
+		.stars {
+			padding-left: 25%;
+		}
+	}
+}
