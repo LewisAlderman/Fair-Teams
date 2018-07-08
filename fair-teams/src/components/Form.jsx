@@ -8,13 +8,17 @@ const Form = ({
 	rating,
 	input,
 	btnValue,
+	disabled,
 }) => {
 	return (
 		<div className="form-container">
 			<form onSubmit={handleSubmit}>
-				<label htmlFor="name">Player Name</label>
+				<label className="label" htmlFor="name">
+					Player Name
+				</label>
 				<br />
 				<input
+					onLoad={console.log(document.getElementById("name"))}
 					id="name"
 					name="player_name"
 					type="text"
@@ -22,6 +26,7 @@ const Form = ({
 					onChange={handleInput}
 					value={input}
 					autoComplete="off"
+					className="form-control"
 				/>
 				<ReactStars
 					onChange={handleRating}
@@ -29,8 +34,16 @@ const Form = ({
 					count={5}
 					value={rating}
 					half={false}
+					size={36}
+					color1={"#242530"}
+					color2={"rgb(255, 255, 79)"}
 				/>
-				<input type="submit" value={btnValue} />
+				<input
+					disabled={disabled}
+					type="submit"
+					value={btnValue}
+					className="btn btn-primary"
+				/>
 			</form>
 		</div>
 	);

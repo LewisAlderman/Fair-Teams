@@ -96,6 +96,8 @@ class App extends Component {
 	};
 
 	render() {
+		const empty =
+			this.state.player.input === "" || this.state.player.rating === 0;
 		return (
 			<div className="app-container">
 				<br />
@@ -106,6 +108,7 @@ class App extends Component {
 					rating={this.state.player.rating}
 					input={this.state.player.input}
 					btnValue={this.state.editMode ? "Save Changes" : "Add Player"}
+					disabled={empty ? "disabled" : null}
 				/>
 				{this.state.players ? (
 					<List

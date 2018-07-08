@@ -1,3 +1,6 @@
+$dark: #242530;
+$light: #edeef7;
+
 .form-container {
 	// background: crimson;
 	width: 50%;
@@ -7,12 +10,48 @@
 	text-align: center;
 
 	form {
+		text-align: center;
 		align-self: center;
 		justify-self: center;
 		margin-bottom: 10%;
+		min-width: 60%;
+
+		& > * {
+			margin: 10px 0;
+		}
+
+		label {
+			font-size: 0.75em;
+			margin-bottom: 0;
+		}
+
+		input[type="text"] {
+			text-align: center;
+			font-size: 1em;
+			padding: 0.3em 0.5em;
+			border: 0;
+			border-radius: 2px;
+			background: $dark;
+			color: $light;
+
+			&:focus {
+				box-shadow: 0 0 0 0.15rem rgba(0, 123, 255, 0.8);
+			}
+		}
+		::placeholder {
+			color: #4b4e63;
+			text-align: center;
+		}
 
 		.stars {
-			padding-left: 25%;
+			display: flex;
+			justify-content: center;
+			margin-top: 0;
+			text-align: center;
+		}
+
+		input[type="submit"] {
+			box-shadow: 1px 3px 0 $dark;
 		}
 	}
 }
