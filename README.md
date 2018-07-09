@@ -2,6 +2,19 @@
 
 A simple and colourful team-making app which generates balanced teams based on the players' ratings.
 
+### Installation
+
+What you _need_ to run the app:
+* [Node.js](https://nodejs.org/en/)
+* [Yarn](https://yarnpkg.com/lang/en/)
+* A Web Browser (Chrome or Firefox typically)
+
+1. Navigate to a directory in your terminal
+2. Run `git clone git@github.com:LewisAlderman/Fair-Teams.git`
+3. `cd /Fair-Teams/fair-teams`
+4. `yarn`
+5. `yarn start`
+
 ---
 
 ### Developer notes
