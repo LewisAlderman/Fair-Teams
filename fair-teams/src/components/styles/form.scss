@@ -59,7 +59,8 @@ $light: #edeef7;
 		}
 
 		input[type="submit"] {
-			box-shadow: 1px 3px 0 $dark;
+			border-radius: 2em;
+			padding: 0.9em 1.2em;
 		}
 	}
 }

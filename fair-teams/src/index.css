@@ -40,7 +40,8 @@
       margin-top: 0;
       text-align: center; }
     .form-container form input[type="submit"] {
-      box-shadow: 1px 3px 0 #242530; }
+      border-radius: 2em;
+      padding: 0.9em 1.2em; }
 
 .list-container {
   width: 60%;
@@ -123,10 +124,6 @@
   font-size: 0.6em;
   font-weight: bolder;
   text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.1); }
-
-input[type].btn {
-  border-radius: 2em;
-  padding: inherit 1em; }
 
 .btn {
   text-transform: uppercase;
