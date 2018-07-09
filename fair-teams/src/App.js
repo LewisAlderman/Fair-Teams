@@ -103,9 +103,6 @@ class App extends Component {
 
 			let teams = document.querySelector(".teams-container");
 			teams.classList.toggle("shown");
-
-			// document.getElementById("generate").value = "Try Again";
-			document.getElementById("generate");
 		}
 	};
 

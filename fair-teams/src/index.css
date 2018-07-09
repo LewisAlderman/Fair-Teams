@@ -193,7 +193,8 @@ body {
     justify-content: center; }
     .form-container form {
       min-width: 60%;
-      max-width: 70%; }
+      max-width: 70%;
+      margin: 5% 0 5%; }
 
   .list-container .intro {
     text-align: center; }
