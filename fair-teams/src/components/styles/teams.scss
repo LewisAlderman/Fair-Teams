@@ -5,13 +5,17 @@
 	opacity: 0;
 	height: 0;
 	transform: translateY(-70px);
-	height: 100%;
-	padding: 2em 2em;
+	height: 0;
+	padding: 0;
+	display: none;
 
 	&.shown {
-		transition: height 200ms, all 400ms ease-out 400ms;
+		transition: display 1ms, padding 1ms, all 400ms ease-out 400ms;
 		opacity: 1;
 		transform: translateY(0);
+		height: 100%;
+		padding: 2em 2em;
+		display: flex;
 	}
 
 	align-items: baseline;
@@ -22,7 +26,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 50%;
+		width: 100%;
 
 		.list-group-item {
 			width: 70%;

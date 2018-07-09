@@ -82,3 +82,36 @@ body {
 		}
 	}
 }
+
+@media screen and (max-width: 900px) {
+	.form-container,
+	.list-container,
+	.teams-container {
+		width: 100%;
+		height: auto;
+	}
+
+	.form-container {
+		justify-content: center;
+
+		form {
+			min-width: 60%;
+			max-width: 70%;
+		}
+	}
+
+	.list-container {
+		.intro {
+			text-align: center;
+		}
+	}
+
+	.teams-container {
+		flex-direction: column;
+		.team-one,
+		.team-two {
+			width: 100%;
+			margin-bottom: 3em;
+		}
+	}
+}
