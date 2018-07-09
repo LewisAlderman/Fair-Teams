@@ -34,7 +34,13 @@ const List = ({ players, handleRemove, handleEdit }) => {
 				) : (
 					<p className="intro">
 						Create some players! <br />
-						<span style={{ fontSize: "2em", textShadow: "none" }}>👀⚽️</span>
+						<span
+							role="img"
+							aria-label="emojis"
+							style={{ fontSize: "2em", textShadow: "none" }}
+						>
+							👀⚽️
+						</span>
 					</p>
 				)}
 			</ul>
