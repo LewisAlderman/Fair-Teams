@@ -2,7 +2,7 @@
   width: 40%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
   transition: all 200ms ease-in, height 1ms 200ms; }
   .form-container.hidden {
@@ -55,6 +55,11 @@
     opacity: 0;
     transform: translateY(-50px);
     height: 0; }
+  .list-container .intro {
+    text-align: right;
+    font-weight: bolder;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+    font-size: 1.25em; }
   .list-container .player-count {
     position: absolute;
     top: -40px;
@@ -121,7 +126,7 @@
 .label {
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  font-size: 0.6em;
+  font-size: 0.8rem;
   font-weight: bolder;
   text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.1); }
 

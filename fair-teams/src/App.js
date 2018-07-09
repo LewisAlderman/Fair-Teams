@@ -7,28 +7,7 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			players: [
-				{
-					name: "Alan",
-					rating: 5,
-				},
-				{
-					name: "Jimbob",
-					rating: 2,
-				},
-				{
-					name: "Jiffyy",
-					rating: 4,
-				},
-				{
-					name: "Tom",
-					rating: 3,
-				},
-				{
-					name: "Lewdog",
-					rating: 5,
-				},
-			],
+			players: [],
 			player: {
 				input: "",
 				rating: 0,
@@ -113,12 +92,21 @@ class App extends Component {
 		let form = document.querySelector(".form-container");
 		let list = document.querySelector(".list-container");
 
-		form.classList.toggle("hidden");
-		list.classList.toggle("hidden");
+		if (
+			form.classList.contains("hidden") &&
+			list.classList.contains("hidden")
+		) {
+			document.location.reload();
+		} else {
+			form.classList.toggle("hidden");
+			list.classList.toggle("hidden");
 
-		let teams = document.querySelector(".teams-container");
+			let teams = document.querySelector(".teams-container");
+			teams.classList.toggle("shown");
 
-		teams.classList.toggle("shown");
+			// document.getElementById("generate").value = "Try Again";
+			document.getElementById("generate");
+		}
 	};
 
 	render() {
@@ -146,7 +134,12 @@ class App extends Component {
 					) : (
 						<p>Add some players</p>
 					)}
-					<button id="generate" className="btn btn-success" onClick={this.hide}>
+					<button
+						disabled={this.state.players.length > 3 ? null : "disabled"}
+						id="generate"
+						className="btn btn-success"
+						onClick={this.hide}
+					>
 						Generate Teams
 					</button>
 					<Teams players={this.state.players} />
