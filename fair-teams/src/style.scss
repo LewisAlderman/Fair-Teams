@@ -2,6 +2,7 @@
 
 @import "components/styles/form";
 @import "components/styles/list";
+@import "components/styles/teams";
 
 // VARIABLES
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -36,6 +37,15 @@ input[type].btn {
 	padding: 0.5em 0.6em;
 }
 
+.player-rating-star {
+	color: rgb(255, 255, 79);
+}
+
+.player-rating {
+	margin: 0 0.5em 0 1em;
+	font-weight: 300;
+}
+
 /**
  * General styling
  */
@@ -59,9 +69,21 @@ body {
 	color: #fff;
 
 	.app-container {
-		// padding: 1em 2em 0;
 		width: 100%;
 		height: 100vh;
 		display: flex;
+		flex-wrap: wrap;
+
+		#generate {
+			padding: 1em 1.5em;
+			background: $primary;
+			position: absolute;
+			z-index: 2;
+			bottom: 3em;
+			left: 50%;
+			transform: translateX(-50%);
+			border-radius: 0;
+			box-shadow: 5px 5px 0 $dark;
+		}
 	}
 }

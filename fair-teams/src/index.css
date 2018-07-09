@@ -1,15 +1,21 @@
 .form-container {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  transition: all 200ms ease-in, height 1ms 200ms; }
+  .form-container.hidden {
+    transition: all 200ms ease-in, height 1ms 200ms;
+    opacity: 0;
+    transform: translateY(-50px);
+    height: 0; }
   .form-container form {
     text-align: center;
     align-self: center;
     justify-self: center;
     margin-bottom: 10%;
-    min-width: 60%; }
+    min-width: 80%; }
     .form-container form > * {
       margin: 10px 0; }
     .form-container form label {
@@ -37,10 +43,17 @@
       box-shadow: 1px 3px 0 #242530; }
 
 .list-container {
-  width: 50%;
+  width: 60%;
+  flex: 1;
   height: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  transition: all 200ms ease-in, height 1ms 200ms; }
+  .list-container.hidden {
+    transition: all 200ms ease-in, height 1ms 200ms;
+    opacity: 0;
+    transform: translateY(-50px);
+    height: 0; }
   .list-container .player-count {
     position: absolute;
     top: -40px;
@@ -50,10 +63,7 @@
     padding: 0;
     align-self: center;
     margin-bottom: 10%;
-    width: 65%; }
-    .list-container ul .player-rating {
-      margin: 0 1.2em;
-      font-weight: 300; }
+    min-width: 55%; }
     .list-container ul .list-group-item {
       position: relative;
       z-index: 1;
@@ -72,11 +82,37 @@
         right: 10px;
         background: #242530;
         transform: skewX(-10deg); }
-      .list-container ul .list-group-item .player-rating-star {
-        color: #ffff4f; }
       .list-container ul .list-group-item button {
         color: #fff;
         border-radius: 0; }
+
+.teams-container {
+  display: flex;
+  width: 100%;
+  transition: height 200ms, all 400ms ease-out 400ms;
+  opacity: 0;
+  height: 0;
+  transform: translateY(-70px);
+  height: 100%;
+  padding: 2em 2em;
+  align-items: baseline; }
+  .teams-container.shown {
+    transition: height 200ms, all 400ms ease-out 400ms;
+    opacity: 1;
+    transform: translateY(0); }
+  .teams-container .team-one,
+  .teams-container .team-two {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%; }
+    .teams-container .team-one .list-group-item,
+    .teams-container .team-two .list-group-item {
+      width: 70%;
+      z-index: 1;
+      background: #242530;
+      padding: 0.4em 0.5em 0.4em 1em; }
 
 /**
  * Global styling
@@ -97,6 +133,13 @@ input[type].btn {
   letter-spacing: 0.02em;
   font-weight: bolder;
   padding: 0.5em 0.6em; }
+
+.player-rating-star {
+  color: #ffff4f; }
+
+.player-rating {
+  margin: 0 0.5em 0 1em;
+  font-weight: 300; }
 
 /**
  * General styling
@@ -120,6 +163,17 @@ body {
   body .app-container {
     width: 100%;
     height: 100vh;
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap; }
+    body .app-container #generate {
+      padding: 1em 1.5em;
+      background: #0069d9;
+      position: absolute;
+      z-index: 2;
+      bottom: 3em;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 0;
+      box-shadow: 5px 5px 0 #242530; }
 
 /*# sourceMappingURL=index.css.map */

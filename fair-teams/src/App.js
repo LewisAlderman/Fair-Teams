@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from "./components/Form";
 import List from "./components/List";
+import Teams from "./components/Teams";
 
 class App extends Component {
 	constructor(props) {
@@ -39,6 +40,7 @@ class App extends Component {
 		this.handleRating = this.handleRating.bind(this);
 		this.handleRemove = this.handleRemove.bind(this);
 		this.handleEdit = this.handleEdit.bind(this);
+		this.hide = this.hide.bind(this);
 	}
 
 	handleSubmit = e => {
@@ -107,31 +109,49 @@ class App extends Component {
 		}
 	};
 
+	hide = () => {
+		let form = document.querySelector(".form-container");
+		let list = document.querySelector(".list-container");
+
+		form.classList.toggle("hidden");
+		list.classList.toggle("hidden");
+
+		let teams = document.querySelector(".teams-container");
+
+		teams.classList.toggle("shown");
+	};
+
 	render() {
 		const empty =
 			this.state.player.input === "" || this.state.player.rating === 0;
+
 		return (
-			<div className="app-container">
-				<br />
-				<Form
-					handleInput={e => this.handleInput(e)}
-					handleRating={this.handleRating}
-					handleSubmit={this.handleSubmit}
-					rating={this.state.player.rating}
-					input={this.state.player.input}
-					btnValue={this.state.editMode ? "Save Changes" : "Add Player"}
-					disabled={empty ? "disabled" : null}
-				/>
-				{this.state.players ? (
-					<List
-						players={this.state.players}
-						handleRemove={this.handleRemove}
-						handleEdit={this.handleEdit}
+			<React.Fragment>
+				<div className="app-container">
+					<Form
+						handleInput={e => this.handleInput(e)}
+						handleRating={this.handleRating}
+						handleSubmit={this.handleSubmit}
+						rating={this.state.player.rating}
+						input={this.state.player.input}
+						btnValue={this.state.editMode ? "Save Changes" : "Add Player"}
+						disabled={empty ? "disabled" : null}
 					/>
-				) : (
-					<p>Add some players</p>
-				)}
-			</div>
+					{this.state.players ? (
+						<List
+							players={this.state.players}
+							handleRemove={this.handleRemove}
+							handleEdit={this.handleEdit}
+						/>
+					) : (
+						<p>Add some players</p>
+					)}
+					<button id="generate" className="btn btn-success" onClick={this.hide}>
+						Generate Teams
+					</button>
+					<Teams players={this.state.players} />
+				</div>
+			</React.Fragment>
 		);
 	}
 }

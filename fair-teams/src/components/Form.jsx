@@ -18,7 +18,6 @@ const Form = ({
 				</label>
 				<br />
 				<input
-					onLoad={console.log(document.getElementById("name"))}
 					id="name"
 					name="player_name"
 					type="text"

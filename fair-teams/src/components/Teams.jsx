@@ -33,15 +33,38 @@ const Teams = ({ players }) => {
 			});
 		}
 
-		return [teamOne, teamTwo];
-    };
-    
-    splitFair(players)
+		let teams = [teamOne, teamTwo];
+		return teams;
+	};
 
-	return(
-        <ul>{teamOne.map((player, i) => <li key="i">{player.name}</li>)}</ul>
-        <ul>{teamTwo.map((player, i) => <li key="i">{player.name}</li>)}</ul>
-    )
+	let [teamOne, teamTwo] = splitFair(players);
+
+	return (
+		<div className="teams-container">
+			<ul className="team-one list-group">
+				{teamOne.map((player, i) => (
+					<li key={i} className="list-group-item">
+						{player.name}
+						<span className="player-rating float-right">
+							{player.rating}
+							<span className="player-rating-star"> &#x2605;</span>
+						</span>
+					</li>
+				))}
+			</ul>
+			<ul className="team-two list-group">
+				{teamTwo.map((player, i) => (
+					<li key={i} className="list-group-item">
+						{player.name}
+						<span className="player-rating float-right">
+							{player.rating}
+							<span className="player-rating-star"> &#x2605;</span>
+						</span>
+					</li>
+				))}
+			</ul>
+		</div>
+	);
 };
 
 export default Teams;

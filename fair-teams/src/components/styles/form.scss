@@ -2,19 +2,27 @@ $dark: #242530;
 $light: #edeef7;
 
 .form-container {
-	// background: crimson;
-	width: 50%;
+	width: 40%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	text-align: center;
+
+	transition: all 200ms ease-in, height 1ms 200ms;
+
+	&.hidden {
+		transition: all 200ms ease-in, height 1ms 200ms;
+		opacity: 0;
+		transform: translateY(-50px);
+		height: 0;
+	}
 
 	form {
 		text-align: center;
 		align-self: center;
 		justify-self: center;
 		margin-bottom: 10%;
-		min-width: 60%;
+		min-width: 80%;
 
 		& > * {
 			margin: 10px 0;
