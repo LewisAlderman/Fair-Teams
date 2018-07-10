@@ -183,6 +183,9 @@ body {
       box-shadow: 5px 5px 0 #242530; }
 
 @media screen and (max-width: 900px) {
+  body {
+    font-size: 1.2rem; }
+
   .form-container,
   .list-container,
   .teams-container {

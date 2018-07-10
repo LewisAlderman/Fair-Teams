@@ -48,7 +48,6 @@ class App extends Component {
 	};
 
 	handleRemove = e => {
-		// NOT HERERERE
 		let selected = e.target.parentNode.dataset.key;
 		let newState = this.state.players;
 		newState.splice(selected, 1);
