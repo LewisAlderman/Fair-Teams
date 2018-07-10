@@ -59,7 +59,6 @@ class App extends Component {
 	};
 
 	handleEdit = e => {
-		//EDIT HERERERERE
 		let field = document.getElementById("name");
 		let selected = e.target.parentNode.dataset.key;
 		let newState = this.state.players;
