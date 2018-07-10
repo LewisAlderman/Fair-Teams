@@ -26,6 +26,7 @@ const Form = ({
 					value={input}
 					autoComplete="off"
 					className="form-control"
+					maxLength="20"
 				/>
 				<ReactStars
 					onChange={handleRating}

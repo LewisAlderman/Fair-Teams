@@ -44,7 +44,9 @@ const Teams = ({ players }) => {
 			<ul className="team-one list-group">
 				{teamOne.map((player, i) => (
 					<li key={i} className="list-group-item">
-						{player.name}
+						{player.name.length > 10
+							? player.name.slice(0, 10) + ".."
+							: player.name}
 						<span className="player-rating float-right">
 							{player.rating}
 							<span className="player-rating-star"> &#x2605;</span>
@@ -55,7 +57,9 @@ const Teams = ({ players }) => {
 			<ul className="team-two list-group">
 				{teamTwo.map((player, i) => (
 					<li key={i} className="list-group-item">
-						{player.name}
+						{player.name.length > 10
+							? player.name.slice(0, 10) + ".."
+							: player.name}
 						<span className="player-rating float-right">
 							{player.rating}
 							<span className="player-rating-star"> &#x2605;</span>
