@@ -180,7 +180,11 @@ body {
       left: 50%;
       transform: translateX(-50%);
       border-radius: 0;
-      box-shadow: 5px 5px 0 #242530; }
+      box-shadow: 5px 5px 0 #242530;
+      opacity: 0.7;
+      transition: all 0.2s ease-in-out; }
+      body .app-container #generate:not(:disabled):hover {
+        opacity: 1; }
 
 @media screen and (max-width: 900px) {
   body {
