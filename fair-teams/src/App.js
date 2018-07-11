@@ -89,17 +89,21 @@ class App extends Component {
 	hide = () => {
 		let form = document.querySelector(".form-container");
 		let list = document.querySelector(".list-container");
+		let teams = document.querySelector(".teams-container");
+		teams.parentNode.removeChild(teams);
 
-		if (
-			form.classList.contains("hidden") &&
-			list.classList.contains("hidden")
-		) {
+		if (!form && !list) {
 			document.location.reload();
 		} else {
 			form.classList.toggle("hidden");
 			list.classList.toggle("hidden");
-
-			let teams = document.querySelector(".teams-container");
+			setTimeout(() => {
+				form.parentNode.appendChild(teams);
+				[form, list].forEach(x => {
+					x.parentNode.removeChild(x);
+				});
+			}, 300);
+			teams.classList.remove("hiding");
 			teams.classList.toggle("shown");
 		}
 	};
