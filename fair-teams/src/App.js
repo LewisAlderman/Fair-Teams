@@ -48,12 +48,12 @@ class App extends Component {
 	};
 
 	handleRemove = e => {
-		let selected = e.target.parentNode.dataset.key;
+		let selected = e.target.parentNode.parentNode.dataset.key;
 		let newState = this.state.players;
 		newState.splice(selected, 1);
 
 		this.setState({
-			players: [newState],
+			players: [...newState],
 		});
 	};
 
