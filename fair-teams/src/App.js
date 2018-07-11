@@ -40,7 +40,10 @@ class App extends Component {
 	};
 
 	handleInput = e => {
-		this.setState({ player: { ...this.state.player, input: e.target.value } });
+		this.setState({
+			...this.state,
+			player: { ...this.state.player, input: e.target.value },
+		});
 	};
 
 	handleRating = e => {
@@ -66,6 +69,7 @@ class App extends Component {
 		if (!this.state.editMode) {
 			field.focus();
 			this.setState({
+				...this.state,
 				editMode: true,
 				player: {
 					...this.state.player,
@@ -76,6 +80,7 @@ class App extends Component {
 		} else {
 			field.blur();
 			this.setState({
+				...this.state,
 				editMode: false,
 				player: {
 					...this.state.player,
