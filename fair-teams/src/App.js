@@ -141,7 +141,7 @@ class App extends Component {
 					>
 						Generate Teams
 					</button>
-					<Teams players={this.state.players} />
+					<Teams players={[...this.state.players]} />
 				</div>
 			</React.Fragment>
 		);
