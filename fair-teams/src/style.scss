@@ -52,6 +52,18 @@ $light: #edeef7;
 	transition: all 400ms ease-out;
 }
 
+.icon {
+	display: flex;
+
+	&.icon-edit {
+		color: darken(#007bff, 30%);
+	}
+
+	&.icon-remove {
+		color: darken(#dc3545, 30%);
+	}
+}
+
 /**
  * General styling
  */
@@ -111,7 +123,6 @@ body {
 	}
 
 	.app-container {
-		// display: block !important;
 		padding: 3em 0 0 !important;
 
 		& > button#generate {

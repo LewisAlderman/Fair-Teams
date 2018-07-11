@@ -141,6 +141,13 @@
   transform: translateY(0);
   transition: all 400ms ease-out; }
 
+.icon {
+  display: flex; }
+  .icon.icon-edit {
+    color: #003166; }
+  .icon.icon-remove {
+    color: #66121a; }
+
 /**
  * General styling
  */
