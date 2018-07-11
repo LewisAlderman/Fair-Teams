@@ -45,7 +45,8 @@
   flex: 1;
   height: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin: 2em 0 0; }
   .list-container .intro {
     text-align: right;
     font-weight: bolder;
@@ -173,8 +174,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    padding: 2em 2em; }
+    align-items: flex-start;
+    padding: calc(100vw / 5) 2em 0; }
     body .app-container #generate {
       order: 1;
       padding: 1em 1.5em;
@@ -219,10 +220,12 @@ body {
       max-width: 70%;
       margin: 0 0 10%; }
 
-  .list-container .intro {
-    text-align: center; }
-  .list-container > ul > .list-group-item {
-    line-height: 2.5em; }
+  .list-container {
+    margin: 2em 0; }
+    .list-container .intro {
+      text-align: center; }
+    .list-container > ul > .list-group-item {
+      line-height: 2.5em; }
 
   .teams-container {
     flex-direction: column; }

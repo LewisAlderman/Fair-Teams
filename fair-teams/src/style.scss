@@ -92,8 +92,8 @@ body {
 		min-height: 100vh;
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
-		padding: 2em 2em;
+		align-items: flex-start;
+		padding: calc(100vw / 5) 2em 0;
 
 		#generate {
 			order: 1;
@@ -153,6 +153,7 @@ body {
 	}
 
 	.list-container {
+		margin: 2em 0;
 		.intro {
 			text-align: center;
 		}
