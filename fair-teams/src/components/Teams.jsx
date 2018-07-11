@@ -40,7 +40,7 @@ const Teams = ({ players }) => {
 	let [teamOne, teamTwo] = splitFair(players);
 
 	return (
-		<div className="teams-container">
+		<div className="teams-container hiding">
 			<ul className="team-one list-group">
 				{teamOne.map((player, i) => (
 					<li key={i} className="list-group-item">

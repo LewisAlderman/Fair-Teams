@@ -1,19 +1,10 @@
 .list-container {
-	// background: blueviolet;
+	transition: all 200ms ease-in;
 	width: 60%;
 	flex: 1;
 	height: 100%;
 	display: flex;
 	justify-content: center;
-
-	transition: all 200ms ease-in, height 1ms 200ms;
-
-	&.hidden {
-		transition: all 200ms ease-in, height 1ms 200ms;
-		opacity: 0;
-		transform: translateY(-50px);
-		height: 0;
-	}
 
 	.intro {
 		// font-size: 1.5em;

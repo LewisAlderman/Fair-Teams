@@ -2,20 +2,13 @@ $dark: #242530;
 $light: #edeef7;
 
 .form-container {
+	transition: all 200ms ease-in;
 	width: 40%;
 	height: 100%;
+	display: none;
 	display: flex;
 	justify-content: flex-end;
 	text-align: center;
-
-	transition: all 200ms ease-in, height 1ms 200ms;
-
-	&.hidden {
-		transition: all 200ms ease-in, height 1ms 200ms;
-		opacity: 0;
-		transform: translateY(-50px);
-		height: 0;
-	}
 
 	form {
 		text-align: center;
